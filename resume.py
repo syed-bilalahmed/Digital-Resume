@@ -7,7 +7,7 @@ st.title("Syed Bilal Ahmed")
 st.header("Personal Information")
 col1, col2 = st.columns([1, 2])
 with col1:
-    st.image("https://via.placeholder.com/150", width=150)  # Replace with your own image URL
+    st.image("./bilal.jpg", width=150)  # Replace with your own image URL
 with col2:
     st.markdown("""
     - **Name:** Syed Bilal Ahmed
