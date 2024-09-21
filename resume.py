@@ -126,11 +126,24 @@ st.markdown("""
 </div>
 """, unsafe_allow_html=True)
 
-# Contact/Download Section
-st.markdown('<h2 class="sub-header">Download Resume</h2>', unsafe_allow_html=True)
-if st.button('Download Resume'):
-    st.write("Downloading Resume... (Coming Soon!)")
+import streamlit as st
 
+# Other parts of your code...
+
+
+# Add this line where your download button is located
+st.markdown('<h2 class="sub-header">Download Resume</h2>', unsafe_allow_html=True)
+
+# Use the file uploader to provide the PDF file
+pdf_file_path = "Syed Bilal Ahmed's CV.pdf"  # Ensure the PDF is in the same directory or provide the correct path
+if st.button('Download Resume'):
+    with open(pdf_file_path, "rb") as pdf_file:
+        btn = st.download_button(
+            label="Download PDF",
+            data=pdf_file,
+            file_name="Syed Bilal Ahmed's CV.pdf",
+            mime="application/pdf"
+        )
 # Footer Section with links
 st.markdown("""
 <div class="footer">
@@ -140,3 +153,4 @@ st.markdown("""
     </p>
 </div>
 """, unsafe_allow_html=True)
+
